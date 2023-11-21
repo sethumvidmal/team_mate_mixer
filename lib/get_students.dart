@@ -49,7 +49,7 @@ class _GetStudentsState extends State<GetStudents> {
                                     return AlertDialog(
                                       title: const Text("Already added!"),
                                       content: const Text(
-                                          "This name is already contains."),
+                                          "This name is already contains you can't add duplicates."),
                                       actions: <Widget>[
                                         TextButton(
                                             style: TextButton.styleFrom(
