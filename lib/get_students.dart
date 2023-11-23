@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:team_mate_mixer/shuffeled_list.dart';
 
 class GetStudents extends StatefulWidget {
   const GetStudents({super.key});
@@ -65,6 +66,7 @@ class _GetStudentsState extends State<GetStudents> {
                                     );
                                   })
                               : studentList.add(myController.text);
+                          myController.clear();
                         });
                       },
                       style: TextButton.styleFrom(
@@ -74,14 +76,18 @@ class _GetStudentsState extends State<GetStudents> {
                       child: const Padding(
                         padding: EdgeInsets.all(3.0),
                         child: Text('Add'),
-                      )
-                    ),
+                      )),
                 ),
                 Container(
                   margin: const EdgeInsets.all(16.0),
                   child: TextButton(
                       onPressed: () {
                         studentList.shuffle();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    ShuffeledList(studentList)));
                         setState(() {});
                       },
                       style: TextButton.styleFrom(
@@ -91,8 +97,7 @@ class _GetStudentsState extends State<GetStudents> {
                       child: const Padding(
                         padding: EdgeInsets.all(3.0),
                         child: Text('Shuffle'),
-                      )
-                    ),
+                      )),
                 )
               ],
             ),

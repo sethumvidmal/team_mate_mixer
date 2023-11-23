@@ -10,7 +10,7 @@ class WelcomePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-            title:const Text('Student mixer'),
+            title:const Text('Team mate mixer'),
             backgroundColor: Colors.blue[400],
           ),
         body:const GetStudents(),
