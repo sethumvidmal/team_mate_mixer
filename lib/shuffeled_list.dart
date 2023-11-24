@@ -10,6 +10,10 @@ class ShuffeledList extends StatefulWidget {
 }
 
 class _ShuffeledListState extends State<ShuffeledList> {
+
+  late int studentCount = widget.shuffledStudentList.length;  //This is student count
+  late int numberOfGroups = widget.shuffledStudentList.length ~/ 5; //This is number of student groups
+  late int remainingStudents = widget.shuffledStudentList.length % 5; //This is remaining students after divide
   
   @override
   Widget build(BuildContext context) {
