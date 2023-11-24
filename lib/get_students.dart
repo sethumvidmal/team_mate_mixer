@@ -87,7 +87,7 @@ class _GetStudentsState extends State<GetStudents> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    ShuffeledList(studentList)));
+                                    ShuffeledList(shuffledStudentList: studentList,)));
                         setState(() {});
                       },
                       style: TextButton.styleFrom(
